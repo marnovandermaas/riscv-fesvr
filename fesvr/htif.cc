@@ -216,8 +216,7 @@ void htif_t::parse_arguments(int argc, char ** argv)
         else        dynamic_devices.push_back(new rfb_t);
         break;
       case HTIF_LONG_OPTIONS_OPTIND + 1:
-        // [TODO] Remove once disks are supported again
-        throw std::invalid_argument("--disk/+disk unsupported (use a ramdisk)");
+        //throw std::invalid_argument("--disk/+disk unsupported (use a ramdisk)");
         dynamic_devices.push_back(new disk_t(optarg));
         break;
       case HTIF_LONG_OPTIONS_OPTIND + 2:
